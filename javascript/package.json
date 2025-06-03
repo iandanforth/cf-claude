@@ -1,0 +1,36 @@
+{
+  "name": "catastrophic-forgetting-js",
+  "version": "0.1.0",
+  "description": "JavaScript components for catastrophic forgetting research",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest",
+    "dev": "nodemon src/index.js",
+    "build": "webpack --mode=production",
+    "lint": "eslint src/"
+  },
+  "keywords": [
+    "machine-learning",
+    "neural-networks",
+    "catastrophic-forgetting",
+    "research"
+  ],
+  "author": "Research Team",
+  "license": "MIT",
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.10.0",
+    "@tensorflow/tfjs-node": "^4.10.0",
+    "ml-matrix": "^6.10.7",
+    "plotly.js": "^2.26.0",
+    "d3": "^7.8.5",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "jest": "^29.6.0",
+    "nodemon": "^3.0.0",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.0",
+    "eslint": "^8.45.0"
+  }
+}
