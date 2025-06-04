@@ -108,7 +108,8 @@ class CatastrophicForgettingViz {
                 this.ctx.fillStyle = isCorrect ? '#00aa00' : '#aa0000';
                 this.ctx.font = 'bold 12px Arial';
                 this.ctx.textAlign = 'center';
-                this.ctx.fillText(isCorrect ? '✓' : '✗', canvasX, canvasY + 20);
+                this.ctx.textBaseline = 'middle';
+                this.ctx.fillText(isCorrect ? '✓' : '✗', canvasX, canvasY);
             }
         }
     }

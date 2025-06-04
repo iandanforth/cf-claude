@@ -77,7 +77,9 @@ class MLP4ClassCatastrophicForgettingViz {
                 this.decisionCtx.fillStyle = isCorrect ? '#00aa00' : '#aa0000';
                 this.decisionCtx.font = 'bold 14px Arial';
                 this.decisionCtx.textAlign = 'center';
-                this.decisionCtx.fillText(isCorrect ? '✓' : '✗', canvasX, canvasY + 20);
+                this.decisionCtx.textBaseline = 'middle';
+                this.decisionCtx.fillText(isCorrect ? '✓' : '✗', canvasX, canvasY);
+                this.decisionCtx.textBaseline = 'alphabetic';
                 
                 // Show predicted class vs actual
                 if (!isCorrect) {
