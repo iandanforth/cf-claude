@@ -307,6 +307,8 @@
             <strong>True Catastrophic Forgetting:</strong> This demonstrates task-specific catastrophic forgetting.
             Train on Classes 0 & 1 (Task 1), then train on Classes 2 & 3 (Task 2). 
             Watch how the network completely forgets how to classify the original classes!
+            <br><br>
+            <strong>Network Introspection:</strong> Hover over any hidden unit (green circles) in the network diagram to see the input weights connecting to that unit!
         </div>
 
         <div class="main-content">
@@ -390,6 +392,7 @@
     </div>
 
     <script src="mlp_4class_classifier.js"></script>
+    <script src="network_introspection.js"></script>
     <script src="mlp_4class_visualization.js"></script>
 </body>
 </html>

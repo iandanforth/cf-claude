@@ -7,6 +7,10 @@ class MLPCatastrophicForgettingViz {
         
         this.classifier = new MLPClassifier(0.1, 4); // Learning rate 0.1, 4 hidden neurons
         
+        // Initialize network introspection
+        this.networkIntrospection = new NetworkIntrospection(this.weightCanvas, this.classifier);
+        this.networkIntrospection.setHoverCallback(() => this.draw());
+        
         this.xMin = 0;
         this.xMax = 8;
         this.yMin = 0;
@@ -207,6 +211,9 @@ class MLPCatastrophicForgettingViz {
         // Draw output neuron
         drawNeuron(outputPosition[0], outputPosition[1], 'Y', '#9C27B0');
         
+        // Update introspection with current network positions (15px radius for all neurons)
+        this.networkIntrospection.setNetworkPositions(inputPositions, hiddenPositions, 15, 15);
+        
         // Draw labels
         this.weightCtx.fillStyle = '#333';
         this.weightCtx.font = '12px Arial';
@@ -239,6 +246,10 @@ class MLPCatastrophicForgettingViz {
         }
         
         this.drawWeightVisualization();
+        
+        // Draw network introspection overlay
+        this.networkIntrospection.redraw();
+        
         this.updateMetrics();
     }
 
